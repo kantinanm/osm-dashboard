@@ -1,0 +1,5 @@
+<h3>Province List</h3>
+<p *ngFor="let province of provinces$ | async">
+	 {{province.pId}}. {{province.provinceName}} 
+	- {{province.provinceNameEN}} - {{province.region}}
+</p> 
