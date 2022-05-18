@@ -21,10 +21,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-http://localhost:4200/
-http://localhost:4200/dashboard
-http://localhost:4200/province/province-list/
-http://localhost:4200/login
+- http://localhost:4200/
+- http://localhost:4200/dashboard
+- http://localhost:4200/province/province-list/
+- http://localhost:4200/login
 
 ```
 
