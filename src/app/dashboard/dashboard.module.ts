@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { MapComponent } from './map/map.component';
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -13,7 +14,7 @@ import { MapComponent } from './map/map.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
   ]
 })
 export class DashboardModule { }
