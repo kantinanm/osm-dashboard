@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Province } from './province';
+import { HttpClient } from '@angular/common/http';
 
 
 const PROVINCES = [
@@ -16,9 +17,21 @@ let provinceList$ = of(PROVINCES);
 
 export class ProvinceService {
 
-  constructor() { }
+    constructor(private http: HttpClient) { }
+	
 	getProvince(): Observable<Province[]> {
 		return provinceList$;
+	}
+
+	async list_province() {
+		return new Promise((res, rej) => {
+		  this.http.get('http://localhost/medcare_api/req_data.php?type=list_province')
+			.subscribe((data: any) => {
+			  res(data)
+			}, (err: any) => {
+			  rej(err)
+			});
+		});
 	}
 
 }

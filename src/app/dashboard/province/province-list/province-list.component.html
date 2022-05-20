@@ -1,5 +1,5 @@
 <h3>Province List</h3>
-<p *ngFor="let province of provinces$ | async">
-	 {{province.pId}}. {{province.provinceName}} 
-	- {{province.provinceNameEN}} - {{province.region}}
-</p> 
+<select class="form-control" name="select_province">
+	<option value="" selected>เลือกทุกจังหวัด</option>
+	<option *ngFor="let item of province_list ; let i=index" value="{{item.pv_tn}}">{{ item.pv_tn}}</option>
+</select>
