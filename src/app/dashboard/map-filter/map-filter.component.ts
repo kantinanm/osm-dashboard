@@ -2,6 +2,7 @@ import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { BackendApiService } from '../services/backend-api.service';
 import * as L from 'leaflet';
 import 'leaflet.markercluster';
+declare var $: any;
 
 
 @Component({
@@ -54,7 +55,7 @@ export class MapFilterComponent implements OnInit,AfterViewInit {
     shadowSize: [41, 41]
     });
     L.Marker.prototype.options.icon = iconDefault;*/
-
+    $.noConflict();
   }
 
   ngAfterViewInit(): void {
